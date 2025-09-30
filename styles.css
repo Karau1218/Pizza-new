@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-size: 'times-new-roman';
+    background-color: darkred;
+}
+main {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    /* Margin AUTO to put it in the MIDDLE */
+    padding: 0 1rem 2rem 1rem;
+}
+header {
+    background-color: lightgray;
+    padding: 2rem 1rem;
+    /* 2rem top, bottom, 1 rem left right */
+
+}
+header img {
+    float: right;
+    max-width: 90px;
+}
+header h1{
+    color: darkgreen;
+    font-weight: 600;
+    font-size: 30;
+}
+#main-button {
+    border: none;   
+    background-color: darkgreen;
+    color: white;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+}
+#tagline {
+    font-style: times-new-roman;
+    color: black;
+}
+fieldset{
+    border: 1px solid darkgreen;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+legend {
+    color:darkgreen;
+    font-variant:small-caps;
+    font-size: 1.5 rem; 
+    padding-left: 1rem;
+    width: 100%;
+}
