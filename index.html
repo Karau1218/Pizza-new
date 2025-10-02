@@ -25,12 +25,39 @@
     <!-- Contact Info -->
      <fieldset>
         <legend> Contact Info</legend>
-        <label for ="fname">First Name:</label>
-        <input type ="text" id="fname" name="fname" placeholder="First Name" required><br>
-        <label for="lname"> Last Name</label>
-        <Input type="text" id="lname" name="fname" placeholder="Last Name" required><br>
+        <label for ="firstname">First Name:</label>
+        <input type ="text" id="firstname" name="firstname" placeholder="First Name" required><br>
+        <label for="lastname"> Last Name</label>
+        <Input type="text" id="lastname" name="lastname" placeholder="Last Name" required><br>
 
      </fieldset>
+     <fieldset>
+        <legend>Select Pickup or Delivery</legend> <!-- TITLE FOR THE PICKUP OR DELIVERY -->
+        <label for ="pickup">
+        <input type ="radio" id="pickup" name="method" value ="pickup" > Pickup<br>
+        </label>
+        <label for ="delivery">
+        <input type ="radio" id="delivery" name="method" value ="delivery" > Delivery <br> <!-- The methods are the same so if you can click the dot it removes the other one -->
+        </label>
+     </fieldset>
+
+     <!-- Add an order button -->
+      <button type="submit" id="order-button">Add Order</button>
+
+      
+
+      <!-- Pizza Size -->
+       <fieldset>
+        <legend> Pizza Size</legend>
+        <select id="size" name="size"> <!-- Dropdown Menu - SELECT A SIZE -->
+            <option value="none">-- SELECT A Size --</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>        
+        </select>
+       </fieldset>
+       
+
     </form>
     </main>
 </body>
