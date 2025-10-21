@@ -20,10 +20,12 @@
     <P id="tagline">I love big purr pizza, cuz why not</P>
     <!-- HR Is for forming the line -->
     <hr> 
-    <p> </p> 
-    <a id="main-button" href ="#" role ="button">Contact us</a>   
+    <p>Big Purr's Pizza serves up fresh, handcrafted pizzas with 
+                bold flavors and a warm, family-friendly vibe. </p> 
+    <a id="main-button" href ="/contact-us" role ="button">Contact us</a>   <!-- Changed href to /contact to link to contact page -->
+    <!--Whatever is in the URL-->
     </header>
-    <form id="pizza-form" action="#" method="get">
+    <form id="pizza-form" action="submit-order" method="post"> 
 
     <!-- Contact Info -->
      <fieldset>
@@ -37,6 +39,11 @@
         <span id = "err-lname" class = "error"> Name cannot be empty</span>
         <Input type="text" id="lname" name="lastname" >
         <!-- removed placeholder: placeholder="Last Name" required> -->
+         
+         <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <span id="err-email" class="error">Email cannot be empty!</span>
+
  <br>      
      </fieldset>
      <fieldset>
