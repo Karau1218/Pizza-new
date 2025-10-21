@@ -8,6 +8,9 @@
     <link rel="icon" href="images/pizza.png">
     <!-- STYLESHEET LINK - indicated by href -->
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- link to JavaScript--> 
+     <!-- the defer shows on top of the page when u submit -->
+    <script src="js/pizza.js" defer></script>
 </head>
 <body>
     <main>
@@ -26,10 +29,15 @@
      <fieldset>
         <legend> Contact Info</legend>
         <label for ="firstname">First Name:</label>
-        <input type ="text" id="firstname" name="firstname" placeholder="First Name" required><br>
+        <span id = "err-fname" class = "error"> Name cannot be empty</span>
+        <input type ="text" id="fname" name="firstname" >
+        <!-- removed placeholder="First Name" required> -->
+<br>
         <label for="lastname"> Last Name</label>
-        <Input type="text" id="lastname" name="lastname" placeholder="Last Name" required><br>
-
+        <span id = "err-lname" class = "error"> Name cannot be empty</span>
+        <Input type="text" id="lname" name="lastname" >
+        <!-- removed placeholder: placeholder="Last Name" required> -->
+ <br>      
      </fieldset>
      <fieldset>
         <legend>Select Pickup or Delivery</legend> <!-- TITLE FOR THE PICKUP OR DELIVERY -->

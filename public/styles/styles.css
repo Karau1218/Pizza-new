@@ -55,3 +55,7 @@ legend {
     padding-left: 1rem;
     width: 100%;
 }
+.error {
+    color: darkred;
+    display: none;
+}
