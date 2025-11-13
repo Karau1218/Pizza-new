@@ -16,15 +16,30 @@
     <main>
     <header>
         <img src="images/pizzaguy.png" alt="Pizza Guy Image">
-    <h1>BIG PURR PIZZA</h1>
+    <h1>Big Purr Pizza</h1>
     <P id="tagline">I love big purr pizza, cuz why not</P>
     <!-- HR Is for forming the line -->
     <hr> 
+    <p>Big purr pizza's pretty good </p> 
+    <!--<a id="main-button" href ="#" role ="button">Contact us</a>  --> 
     </header>
+    <h1>Thank you for your order, <%= order.firstname %>!</h1> <!--returns the first name in confirmation-->
+    <h2> Order Summary</h2>
+        <p>Name: <%= order.firstname %> <%= order.lastname %></p>
+        <p>Email: <%= order.email %> </p>
+        <p>Toppings: <%= order.toppings %> </p>
+        <p>Size: <%= order.size %> </p>
+        <p>Comment: <%= order.comment %> </p>
+        <p>Date/Time: <%= order.timestamp.toLocaleString() %> </p>
 
-        <h1> Admin Page</h1>
-      
+    
+    
+    
 
+
+    <footer>
+        <p>&copy; 2023 Big Purr Pizza</p>
+    </footer>
     </main>
 </body>
 </body>

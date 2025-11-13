@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--PIZZA ICON ~ SHOWING AS ICON -->
+    <link rel="icon" href="images/pizza.png">
+    <!-- STYLESHEET LINK - indicated by href -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+
+   
+    <!-- link to JavaScript--> 
+     <!-- the defer shows on top of the page when u submit -->
+    <script src="js/pizza.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+</head>
+<body>
+    <main>
+    <header>
+        <img src="images/pizzaguy.png" alt="Pizza Guy Image">
+    <h1>BIG PURR PIZZA</h1>
+    <P id="tagline">I love big purr pizza, cuz why not</P>
+    <!-- HR Is for forming the line -->
+    <hr> 
+    </header>
+
+        <h1> Admin Page</h1>
+        <table id="order-table" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Toppings</th>
+                    <th>Size</th>
+                    <th>Comment</th>
+                    <th>Date/Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% orders.forEach(order => { %>
+                <tr> 
+                    <td><%= order.firstname %> <%= order.lastname %></td>
+                    <td><%= order.email %></td>
+                    <td><%= order.toppings %></td>
+                    <td><%= order.size %></td>
+                    <td><%= order.cpmment %></td>
+                    <td><%= order.date %></td>
+                </tr>
+                <% }); %>
+            </body>
+                <!--work on the defer that's below or copy instructiors code-->
+       <script defer>
+                    let table = new DataTable('#order-table')
+                </script>
+
+    </main>
+
+</body>
+</body>
+</body>
+</html>
+
+
+

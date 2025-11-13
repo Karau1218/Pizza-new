@@ -1,5 +1,16 @@
 //Import the express module
 import express from 'express';
+import mysql2 from 'mysql2'; // import for mysql
+
+
+const pool = mysql2.createPool( {
+    host: '165.232.154.27',
+    user: 'root',
+    password: '58Sz1KaMf-2V1q(9',
+    database: 'pizza_db',
+    port: 3306,
+}).promise();
+
 //create an instance of an Express application
 const app = express();
 
@@ -15,6 +26,8 @@ app.use(express.urlencoded({extend3ed: true}));
 // create an array to store orders
 const orders = [];
 
+app.set('view engine','ejs');
+
 //Define a default "route" ('/')
 //req: contains information about the incoming request
 //res: allows us to send back a response to the client
@@ -22,33 +35,41 @@ app.get('/', (req, res) => {
     // Send "Hello, World!" as a response to the client
     //let name = 'Poppa\'s Pizza';
     //res.send(`<h1>Welcome to ${name}!</h1>`);
-    res.sendFile(`${import.meta.dirname}/views/home.html`)
+   // res.sendFile(`${import.meta.dirname}/views/home.html`)
+   res.render('home');
 });
 
 //define "contact us" route
 app.get('/contact-us', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/contact.html`)
+    //res.sendFile(`${import.meta.dirname}/views/contact.ej`)
+        res.render('contact')
+
 
 })
 
 //define "confirmation" route
 app.get('/confirm', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`)
+    //res.sendFile(`${import.meta.dirname}/views/confirmation.html`)
+    res.render('confirmation')
 
 })
+
 
 // for admin route to a new different page
 //define "admin" route
 app.get('/admin', (req, res) => {
-    res.send(orders);
+
+    //res.send(orders);
     //res.sendFile(`${import.meta.dirname}/views/admin.html`)
+res.render('admin', {orders}) // send the view to admin
+
 
 })
 
 // for submit-order route to a new different page
-//define "admin" route
+//define "submit" route // POST ROUTE
 app.post('/submit-order', (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
     //res.sendFile(`${import.meta.dirname}/views/confirmation.html`)
 
 // create a JSON object to store the data
@@ -60,13 +81,14 @@ const order = {
   topings: req.body.topings,  
   size: req.body.size,
   comment: req.body.comment, 
+  timestamp: new Date()
 };
 
 // Add order to array
 orders.push(order);
 console.log(orders);
 
-
+res.render('confirmation', {order}) // returns the first name in the confirmations
 
 })
 

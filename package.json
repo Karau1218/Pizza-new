@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Karau1218/Pizza-new#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
