@@ -3,13 +3,7 @@ import express from 'express';
 import mysql2 from 'mysql2'; // import for mysql
 
 
-const pool = mysql2.createPool( {
-    host: '165.232.154.27',
-    user: 'root',
-    password: '58Sz1KaMf-2V1q(9',
-    database: 'pizza_db',
-    port: 3306,
-}).promise();
+
 
 //create an instance of an Express application
 const app = express();
