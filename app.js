@@ -129,30 +129,13 @@ app.post('/submit-order', async(req, res) => {
 });
 
 
-// create a JSON object to store the data / WORDK ON 
-const order = {
-  firstname: req.body.firstname,
-  lastname: req.body.lastname,
-    lastname: req.body.lastname,
-      lastname: req.body.lastname,
-        lastname: req.body.lastname,
-          lastname: req.body.lastname,
 
-
-  
-  email: req.body.email,
-  method: req.body.method,
-  topings: req.body.topings,  
-  size: req.body.size,
-  comment: req.body.comment, 
-  timestamp: new Date()
-};
 
 // Add order to array
-orders.push(order);
+
 console.log(orders);
 
-res.render('confirmation', {order}) // returns the first name in the confirmations
+//res.render('confirmation', {order}) // returns the first name in the confirmations
 
 
 
